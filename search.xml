@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>如何使用Hexo搭建个人博客？</title>
+    <url>/2024/07/07/build-Blog/</url>
+    <content><![CDATA[<h1 id="如何使用Hexo搭建个人博客？"><a href="#如何使用Hexo搭建个人博客？" class="headerlink" title="如何使用Hexo搭建个人博客？"></a>如何使用Hexo搭建个人博客？</h1><p>使用 Hexo 搭建个人博客是一个简单而有趣的过程，接下来我将带你使用Hexo搭建个人博客。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
+<li><p><strong>安装 Node.js 和 npm</strong>：</p>
+<p>Hexo 依赖于 Node.js 和 npm，首先需要确保你已经安装了它们。如果没有，可以在 <a class="link"   href="https://nodejs.org/" >Node.js 官网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 下载并安装。</p>
+<p>安装完成之后可以使用<code>node -v</code>和<code>npm -v</code>指令查看是否安装成功！</p>
+</li>
+<li><p><strong>安装 Hexo</strong>： </p>
+<p>使用 npm 安装 Hexo：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm i -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完成之后可以使用<code>hexo -v</code>指令查看是否安装成功！</p>
+</li>
+</ol>
+<h2 id="初始化-Hexo"><a href="#初始化-Hexo" class="headerlink" title="初始化 Hexo"></a>初始化 Hexo</h2><ol>
+<li><p>创建一个新的Hexo文件夹：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init my-blog</span><br></pre></td></tr></table></figure></div>
+
+<p>注意要将 <code>my-blog</code> 替换为你想要的博客文件夹名称。</p>
+<p>完成后，进入该文件夹：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> my-blog</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>安装依赖：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm i</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h2 id="配置-Hexo"><a href="#配置-Hexo" class="headerlink" title="配置 Hexo"></a>配置 Hexo</h2><ol>
+<li><p>**配置文件 <code>_config.yml</code>**： </p>
+<p>打开文件 <code>my-blog/_config.yml</code>，你可以在这里配置站点的一些基本信息，如标题、描述、语言等。例如：</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这是博客的标题</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">My</span> <span class="string">Blog</span></span><br><span class="line"><span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># 博客描述</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;这是我的个人博客&#x27;</span></span><br><span class="line"><span class="comment"># 网站的关键词，支持多个关键词。</span></span><br><span class="line"><span class="attr">keywords:</span> </span><br><span class="line"><span class="comment"># 作者名称</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Your</span> <span class="string">Name</span></span><br><span class="line"><span class="comment"># 语言设置</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="comment"># 时区设置</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h3 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h3><ol>
+<li><p>新建文章：</p>
+<p>使用以下命令创建一篇新的文章：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;My First Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>这将在<code>source/_posts/</code>目录下创建一个名为<code>My-First-Post.md</code>的文件，其实就是Markdown。</p>
+</li>
+</ol>
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><ol>
+<li><p>启动本地服务器： </p>
+<p>在博客文件夹中运行以下命令：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+
+<p>然后在浏览器中访问 <a href="http://localhost:4000，你将看到你的博客页面。">http://localhost:4000，你将看到你的博客页面。</a></p>
+</li>
+</ol>
+<p>当然这些步骤只能做到本地发布，那如何发布到公网上，供大家访问呢？不要急，我会在下一篇文章详细介绍！！！</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>发错了，怎么删除博客文章？？？</title>
+    <url>/2024/07/07/delete-Article/</url>
+    <content><![CDATA[<h1 id="删除文章？"><a href="#删除文章？" class="headerlink" title="删除文章？"></a>删除文章？</h1><p>不小心发错，或者写错了怎么办？不用着急Later教你解决这个问题！！！</p>
+<h2 id="首先进入Hexo项目目录"><a href="#首先进入Hexo项目目录" class="headerlink" title="首先进入Hexo项目目录:"></a>首先进入Hexo项目目录:</h2><p>打开命令行，进入你的Hexo项目目录。</p>
+<h2 id="之后找到要删除的文章："><a href="#之后找到要删除的文章：" class="headerlink" title="之后找到要删除的文章："></a>之后找到要删除的文章：</h2><p>Hexo默认会将文章存储在source&#x2F;_posts目录下（如果你没有修改默认配置的话）。</p>
+<h2 id="在删除文章："><a href="#在删除文章：" class="headerlink" title="在删除文章："></a>在删除文章：</h2><p>找到要删除的文章文件（通常是以.md为后缀的文件）</p>
+<h1 id="之后需要清理生成的静态文件"><a href="#之后需要清理生成的静态文件" class="headerlink" title="之后需要清理生成的静态文件"></a>之后需要清理生成的静态文件</h1><p>删除文章后，需要清理并重新生成静态文件，以确保更新后的博客内容反映在生成的静态网页中。</p>
+<h2 id="清理生成的静态文件："><a href="#清理生成的静态文件：" class="headerlink" title="清理生成的静态文件："></a>清理生成的静态文件：</h2><p>在Hexo项目目录中执行以下命令来清理生成的静态文件：<br><code>hexo clean</code>或者<code>hexo c</code></p>
+<h2 id="重新生成静态文件："><a href="#重新生成静态文件：" class="headerlink" title="重新生成静态文件："></a>重新生成静态文件：</h2><p>清理完成后，重新生成静态文件：<br><code>hexo generate</code>或者<code>hexo g</code></p>
+<h2 id="部署更新"><a href="#部署更新" class="headerlink" title="部署更新"></a>部署更新</h2><p>如果你使用了Hexo自动部署插件（如hexo-deployer-git），则可以直接执行部署命令来将更新后的静态文件部署到远程服务器或者版本控制仓库。<br><code>hexo deploy</code>或者<code>hexo d</code></p>
+]]></content>
+      <tags>
+        <tag>删除</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何发布博客？</title>
+    <url>/2024/07/07/release-Blog/</url>
+    <content><![CDATA[<h1 id="如何发布博客？"><a href="#如何发布博客？" class="headerlink" title="如何发布博客？"></a>如何发布博客？</h1><p>接上一篇用Hexo搭建博客的文章，本文将介绍如何将Hexo博客部署到 GitHub 上，如果你有个人的服务器的话，可以移步我的另一篇文章《如何把Hexo博客部署到服务器上》。</p>
+<h2 id="步骤一：创建-GitHub-仓库"><a href="#步骤一：创建-GitHub-仓库" class="headerlink" title="步骤一：创建 GitHub 仓库"></a>步骤一：创建 GitHub 仓库</h2><p>在 GitHub 上创建一个新的仓库，命名是固定的，比如 <code>username.github.io</code>，其中 <code>username</code> 是你的 GitHub 用户名。</p>
+<h2 id="步骤二：安装-Git-和-Hexo-deployer-git-插件"><a href="#步骤二：安装-Git-和-Hexo-deployer-git-插件" class="headerlink" title="步骤二：安装 Git 和 Hexo-deployer-git 插件"></a>步骤二：安装 Git 和 Hexo-deployer-git 插件</h2><ol>
+<li><p><strong>安装 Git</strong>：确保你的计算机上安装了 Git，并且配置了 GitHub 的 SSH 公钥，这样你可以与 GitHub 仓库进行安全的通信。</p>
+</li>
+<li><p><strong>安装 Hexo-deployer-git 插件</strong>：在命令行中进入你的 Hexo 博客目录，运行以下命令安装插件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h2 id="步骤三：配置-Hexo-部署设置"><a href="#步骤三：配置-Hexo-部署设置" class="headerlink" title="步骤三：配置 Hexo 部署设置"></a>步骤三：配置 Hexo 部署设置</h2><p><strong>配置 <code>_config.yml</code> 文件</strong>：打开 Hexo 博客根目录下的 <code>_config.yml</code> 文件，在文件末尾添加或修改以下部分：</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:username/username.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span>  <span class="comment"># 分支可以根据需要调整，通常为 master</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="步骤四：生成并部署博客"><a href="#步骤四：生成并部署博客" class="headerlink" title="步骤四：生成并部署博客"></a>步骤四：生成并部署博客</h2><ol>
+<li><p><strong>生成静态文件</strong>：运行以下命令生成静态文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>部署到 GitHub</strong>：运行以下命令将生成的静态文件部署到 GitHub 上：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>或者</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h2 id="步骤五：访问你的博客"><a href="#步骤五：访问你的博客" class="headerlink" title="步骤五：访问你的博客"></a>步骤五：访问你的博客</h2><p><strong>访问博客</strong>：打开浏览器，访问 <code>https://username.github.io</code>，其中 <code>username</code> 是你的 GitHub 用户名。你的 Hexo 博客现在应该已经成功部署到 GitHub Pages 上了。</p>
+<p>通过这些步骤，你就可以将 Hexo 博客成功地部署到 GitHub 上，并且可以通过 GitHub Pages 免费托管和访问你的博客内容。</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>发布</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>怎么破解Typora？</title>
+    <url>/2024/07/08/crack-Typora/</url>
+    <content><![CDATA[<h1 id="怎么破解Typora？"><a href="#怎么破解Typora？" class="headerlink" title="怎么破解Typora？"></a>怎么破解Typora？</h1><p>想白嫖不想付费怎么办？Later这就教你！！！</p>
+<h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p>首先下载 <code>Typora</code> 的<a class="link"   href="https://so.csdn.net/so/search?q=%E5%AE%89%E8%A3%85%E5%8C%85&spm=1001.2101.3001.7020" >安装包 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>：<a class="link"   href="https://typora.io/" >官网(国内可能打不开) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>、<a class="link"   href="https://typoraio.cn/" >中文站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>选择你需要的版本下载，我下载了目前最新版 1.9.5</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240708185201348.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240708185312398.png"
+                     
+                ></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我安装时忘截图了，简要说一下步骤吧</p>
+<ul>
+<li>双击安装包</li>
+<li>选安装路径（想改就改，暂时先记着）</li>
+<li>勾选 <code>Create a desktop shortcut</code></li>
+<li>点击 Install 安装</li>
+<li>去除勾选 <code>Launch Typora</code> ，点击 Finish</li>
+</ul>
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><ol>
+<li><h3 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">阿里云盘</span><br><span class="line">https://www.alipan.com/s/N11xrSAWS58</span><br><span class="line">提取码: d73y</span><br><span class="line"></span><br><span class="line">蓝奏云</span><br><span class="line">https://wwm.lanzout.com/iWFTq1xvzalc</span><br><span class="line">密码:8899</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>解压 <code>NodeInject-windows.zip</code> ，得到下面四个文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240708185746715.png"
+                     
+                ></p>
+</li>
+<li><p>复制</p>
+<p>复制两个 <code>.exe</code> 文件到 <code>typora</code> 的安装目录</p>
+</li>
+<li><p>执行</p>
+<p>在 <code>Typora</code> 的安装目录里打开终端，依次输入</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">.\node_inject.exe</span><br><span class="line">.\license-gen.exe</span><br></pre></td></tr></table></figure></div>
+
+<p>将终端显示的 <code>License for you</code> 后面的序列号复制下来</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">License <span class="keyword">for</span> you: LFJWQZ-QG5GR4-Y9HNSW-FUCC77</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>激活</p>
+<p>打开 <code>Typora</code> 软件，点击输入序列号，输入一个邮箱，复制生成的序列号进行激活</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240708190036104.png"
+                     
+                ></p>
+<p>激活成功！</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>破解</tag>
+        <tag>Typora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>怎么把腾讯云的对象存储弄成图床？</title>
+    <url>/2024/07/08/image-Hosting/</url>
+    <content><![CDATA[<h1 id="怎么把腾讯云的对象存储弄成图床？"><a href="#怎么把腾讯云的对象存储弄成图床？" class="headerlink" title="怎么把腾讯云的对象存储弄成图床？"></a>怎么把腾讯云的对象存储弄成图床？</h1><p>由于在书写个人博客的时候需要上传一些图片，视频，音频文件，然后编辑时候一般使用的都是markdown格式，然后图片的存储有时候就很麻烦，故需要一个图床来满足这个需求。</p>
+<ol>
+<li><h2 id="环境的准备"><a href="#环境的准备" class="headerlink" title="环境的准备"></a>环境的准备</h2><ul>
+<li>PicGo:一个一个用于快速上传图片并获取图片 URL 链接的工具，支持目前市面上绝大部分的云服务厂商，例如：腾讯云COS，华为云COS等。 </li>
+<li>PicGo官网链接:<a class="link"   href="https://link.zhihu.com/?target=https://picgo.github.io/PicGo-Doc/" >https://link.zhihu.com/?target=https%3A//picgo.github.io/PicGo-Doc/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>Typora:专门写markdown的，但是要收费，不过可以破解，详细破解教程可以看我的另一篇文章《如何破解Typora》</li>
+<li>腾讯云对象存储COS：先使用新用户的免费额度使用半年(180天)，用于存储图片并提供在线访问。</li>
+</ul>
+</li>
+<li><h2 id="PicGo的安装"><a href="#PicGo的安装" class="headerlink" title="PicGo的安装"></a>PicGo的安装</h2><p>安装包链接:<a class="link"   href="https://link.zhihu.com/?target=https://github.com/Molunerfinn/PicGo/releases" >https://link.zhihu.com/?target=https%3A//github.com/Molunerfinn/PicGo/releases <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>找到对应自己操作系统的版本，这里演示的是windows版本</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/a119553fb3c8bd874ceb2ee0c4af163.png"
+                      alt="下载链接"
+                ></p>
+<p>如果还有其他问题，可以参考官方问题总结：</p>
+<p>官方问题总结:<a class="link"   href="https://link.zhihu.com/?target=https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md" >https://link.zhihu.com/?target=https%3A//github.com/Molunerfinn/PicGo/blob/dev/FAQ.md <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="安装完成之后怎么启动？"><a href="#安装完成之后怎么启动？" class="headerlink" title="安装完成之后怎么启动？"></a>安装完成之后怎么启动？</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240708180755740.png"
+                      alt="安装完成之后怎么启动？"
+                ></p>
+<p>安装完成之后就可以去配置存储桶了。</p>
+</li>
+<li><h2 id="注册和创建桶"><a href="#注册和创建桶" class="headerlink" title="注册和创建桶"></a>注册和创建桶</h2><p>登录腾讯云官网，进入对象存储（COS）管理控制台。</p>
+<p>创建一个新的存储桶（Bucket），并选择适合你需求的存储类型和区域。</p>
+<ol>
+<li><h3 id="入口：总览-控制台-腾讯云-tencent-com"><a href="#入口：总览-控制台-腾讯云-tencent-com" class="headerlink" title="入口：总览 - 控制台 - 腾讯云 (tencent.com)"></a>入口：<a class="link"   href="https://console.cloud.tencent.com/" >总览 - 控制台 - 腾讯云 (tencent.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240708181354185.png"
+                      alt="进入控制台选择对象存储"
+                ></p>
+</li>
+<li><h3 id="创建存储桶"><a href="#创建存储桶" class="headerlink" title="创建存储桶"></a>创建存储桶</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/309ab8be84fafbfd4fcd575995e3db5.png"
+                      alt="第一步"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/2ac808cb17ab9faee99a4439c7c9dc4.png"
+                      alt="第二步"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/b0d7816c84783febfa88586f9ae4265.png"
+                      alt="第三步"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/2363a5e8b835af9d7bfe8860ca9b860.png"
+                      alt="第四步"
+                ></p>
+</li>
+<li><h3 id="记录存储桶配置"><a href="#记录存储桶配置" class="headerlink" title="记录存储桶配置"></a>记录存储桶配置</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/1ee186a0b91256f32dc0edea1870fce.png"
+                      alt="第一步"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/a216527d8b59b37f30b30cbcfbbc72c.png"
+                      alt="第二部"
+                ></p>
+</li>
+<li><h3 id="获取密钥对"><a href="#获取密钥对" class="headerlink" title="获取密钥对"></a>获取密钥对</h3><p>入口：<a class="link"   href="https://console.cloud.tencent.com/cam/capi" >https://console.cloud.tencent.com/cam/capi <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/3b606729b1cd738fb0d5f277507ab74.png"
+                      alt="获取密钥对"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/28e8c19f9532327c44b4c5547cc0ec2.png"
+                      alt="提示"
+                ></p>
+</li>
+<li><h3 id="记录需要的5个信息（上面几步已经全部获取到）："><a href="#记录需要的5个信息（上面几步已经全部获取到）：" class="headerlink" title="记录需要的5个信息（上面几步已经全部获取到）："></a>记录需要的5个信息（上面几步已经全部获取到）：</h3><ul>
+<li>SecretId</li>
+<li>SecretKey</li>
+<li>存储桶名称Bucket</li>
+<li>AppId</li>
+<li>所属地域</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><ol>
+<li><h3 id="打开我们前面安装的PicGo"><a href="#打开我们前面安装的PicGo" class="headerlink" title="打开我们前面安装的PicGo"></a>打开我们前面安装的PicGo</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/02903be48717845539a8b4d6ef3d728.png"
+                     
+                ></p>
+</li>
+<li><h3 id="图床设置→腾讯云COS"><a href="#图床设置→腾讯云COS" class="headerlink" title="图床设置→腾讯云COS"></a>图床设置→腾讯云COS</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/c6db257959251fc1d26d531ee7e8ca8.png"
+                     
+                ></p>
+</li>
+<li><p>和我一样的配置就好了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/cf29d2520e1a97d732cda9023c59e33.png"
+                     
+                ></p>
+</li>
+<li><h3 id="设置为默认图床"><a href="#设置为默认图床" class="headerlink" title="设置为默认图床"></a>设置为默认图床</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/65b8ba66ef57f18f8423d006e246d45.png"
+                     
+                ></p>
+</li>
+<li><p>测试上传</p>
+<p>将图片拖入</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240708183832668.png"
+                     
+                ></p>
+<p>提示成功</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/53cee49cd4492db278e9e9b43ac0816.png"
+                     
+                ></p>
+<p>查看结果</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/be566ca113f81faca85978ee711ac5e.png"
+                     
+                ></p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/82df7ca31d9ef6b6dbe9628aab5dd0c.png"
+                      style="zoom:25%;" 
+                ></li>
+</ol>
+</li>
+<li><h2 id="配置Typora"><a href="#配置Typora" class="headerlink" title="配置Typora"></a>配置Typora</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/ffb8ee5a0c2514455d801e08820c3cf.png"
+                     
+                ></p>
+<p>验证一下</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/817d82b0090dafee29a6e68fadeb21c.png"
+                     
+                ></p>
+</li>
+</ol>
+<p>这样我们就完成图床的搭建了，可以做到插入图片就立即调用picgo上传到你的存储桶，加上Typora所见即所得的优越书写体验，只能说非常的好用！！！</p>
+]]></content>
+      <tags>
+        <tag>云存储</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+</search>
