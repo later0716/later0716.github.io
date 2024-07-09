@@ -112,7 +112,11 @@
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></div>
 
 <p>或者</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></div>
+
+<p>如果你发现你部署上去的博客和你在开发环境中看见的博客不一样，可以尝试把public文件夹删了，之后在执行<code>hexo g</code>或者<code>hexo generate</code>命名重新生成静态文件。</p>
+<p>然后<code>hexo c</code>这个指令可写可不写，就是用于清除缓存的。<br>开发环境一般是<code>hexo c</code>+<code>hexo g</code>+<code>hexo s</code>，部署的时候一般是<code>hexo c</code>+<code>hexo g</code>+<code>hexo d</code>，不过这个<code>hexo c</code>可写可不写。</p>
+</li>
 </ol>
 <h2 id="步骤五：访问你的博客"><a href="#步骤五：访问你的博客" class="headerlink" title="步骤五：访问你的博客"></a>步骤五：访问你的博客</h2><p><strong>访问博客</strong>：打开浏览器，访问 <code>https://username.github.io</code>，其中 <code>username</code> 是你的 GitHub 用户名。你的 Hexo 博客现在应该已经成功部署到 GitHub Pages 上了。</p>
 <p>通过这些步骤，你就可以将 Hexo 博客成功地部署到 GitHub 上，并且可以通过 GitHub Pages 免费托管和访问你的博客内容。</p>
