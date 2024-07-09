@@ -454,4 +454,22 @@
         <tag>主题</tag>
       </tags>
   </entry>
+  <entry>
+    <title>反方向的钟MV</title>
+    <url>/2024/07/09/%E5%8F%8D%E6%96%B9%E5%90%91%E7%9A%84%E9%92%9FMV/</url>
+    <content><![CDATA[<p>闲来无事，分享一下周董的反方向的钟！</p>
+<div style="text-align: center; margin-top: 20px;">
+    <video id="video" controls preload="none" poster="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/P_001.png" style="max-width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); border-radius: 8px;">
+        <source id="mp4" src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/video%2F%E5%8F%8D%E6%96%B9%E5%90%91%E7%9A%84%E9%92%9F.mp4" type="video/mp4">
+        您的浏览器不支持 HTML5 视频标签。
+    </video>
+</div>
+]]></content>
+      <categories>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>MV</tag>
+      </tags>
+  </entry>
 </search>
