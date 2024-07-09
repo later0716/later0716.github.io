@@ -364,4 +364,24 @@
         <tag>图床</tag>
       </tags>
   </entry>
+  <entry>
+    <title>这是一篇加密文章，需要获取内容请联系作者获取密码</title>
+    <url>/2024/07/09/encryption/</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="这是一个错误的密码！" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="4c1d408b2fefc63a07a3c1599f748a272149cbe83ab6af68ff423e8d213e61f1">5e908a6c31a79bec4b8c2d36b47cd41bed067e07ad980d44a66868f1d03b610c480b6e4ceba7507d7553c66f8ab6d31a613505b98304b08a5b32e80c79826341fb385b078940eb55cf19c8e3698acd1518799b74aee85f820c924182bab95558e8795dbb6bca99324ad9ee0740877b16926bca439036caaa0eb0dfa8d4339c11ef42bfe2afc6a34cba355ce8e9f399378dd58dd382baf3c8a38faa4fa80ddc128df3df4a5093a7cb8154e6fa0fb0d2219f1562c48d60785394bc27a344ed3ec680320b00e94abb492209dfbe3375c95a8b6e2647d9305a41f00a4d01193c099adbd50046458a8ba687fd9112f9d9fcd7c1a1ca53c9f3fce2fef186bd6592ad688b14c4198a432f17f96a6c40ea3882c1d80ecfb72e1e83dd9523042dbd9cde54e8635b373c9c27cd3892a7649f1a68a060e0b8a7e96079c215ef165bfb019e17a4fabb13df90ec26fc616e30b2525db744e3e3c6af7f433fd8260354e9443ad208b207704484206c4bef18afebfffcd062a960cd87deec852d4f78b36215c27f4a2f4cfa629aebf98faad04c0a7e6f4e1b8470dd67c4fa34c4ebf8df46668b9a452825b175018b0bfb7f1785396638776f281301550631d308c7686a884505e3a90e4268b6a4501598e2428850e5c0a6</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这篇文章被加密了，请联系作者获取密码！！！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-swup-reload-script src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>加密</tag>
+      </tags>
+  </entry>
 </search>
