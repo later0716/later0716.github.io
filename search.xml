@@ -3,7 +3,7 @@
   <entry>
     <title>如何使用Hexo搭建个人博客？</title>
     <url>/2024/07/07/build-Blog/</url>
-    <content><![CDATA[<h1 id="如何使用Hexo搭建个人博客？"><a href="#如何使用Hexo搭建个人博客？" class="headerlink" title="如何使用Hexo搭建个人博客？"></a>如何使用Hexo搭建个人博客？</h1><p>使用 Hexo 搭建个人博客是一个简单而有趣的过程，接下来我将带你使用Hexo搭建个人博客。</p>
+    <content><![CDATA[<p>使用 Hexo 搭建个人博客是一个简单而有趣的过程，接下来我将带你使用Hexo搭建个人博客。</p>
 <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
 <li><p><strong>安装 Node.js 和 npm</strong>：</p>
 <p>Hexo 依赖于 Node.js 和 npm，首先需要确保你已经安装了它们。如果没有，可以在 <a class="link"   href="https://nodejs.org/" >Node.js 官网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 下载并安装。</p>
@@ -84,7 +84,7 @@
   <entry>
     <title>如何发布博客？</title>
     <url>/2024/07/07/release-Blog/</url>
-    <content><![CDATA[<h1 id="如何发布博客？"><a href="#如何发布博客？" class="headerlink" title="如何发布博客？"></a>如何发布博客？</h1><p>接上一篇用Hexo搭建博客的文章，本文将介绍如何将Hexo博客部署到 GitHub 上，如果你有个人的服务器的话，可以移步我的另一篇文章《如何把Hexo博客部署到服务器上》。</p>
+    <content><![CDATA[<p>接上一篇用Hexo搭建博客的文章，本文将介绍如何将Hexo博客部署到 GitHub 上，如果你有个人的服务器的话，可以移步我的另一篇文章《如何把Hexo博客部署到服务器上》。</p>
 <h2 id="步骤一：创建-GitHub-仓库"><a href="#步骤一：创建-GitHub-仓库" class="headerlink" title="步骤一：创建 GitHub 仓库"></a>步骤一：创建 GitHub 仓库</h2><p>在 GitHub 上创建一个新的仓库，命名是固定的，比如 <code>username.github.io</code>，其中 <code>username</code> 是你的 GitHub 用户名。</p>
 <h2 id="步骤二：安装-Git-和-Hexo-deployer-git-插件"><a href="#步骤二：安装-Git-和-Hexo-deployer-git-插件" class="headerlink" title="步骤二：安装 Git 和 Hexo-deployer-git 插件"></a>步骤二：安装 Git 和 Hexo-deployer-git 插件</h2><ol>
 <li><p><strong>安装 Git</strong>：确保你的计算机上安装了 Git，并且配置了 GitHub 的 SSH 公钥，这样你可以与 GitHub 仓库进行安全的通信。</p>
@@ -119,7 +119,7 @@
   <entry>
     <title>怎么破解Typora？</title>
     <url>/2024/07/08/crack-Typora/</url>
-    <content><![CDATA[<h1 id="怎么破解Typora？"><a href="#怎么破解Typora？" class="headerlink" title="怎么破解Typora？"></a>怎么破解Typora？</h1><p>想白嫖不想付费怎么办？Later这就教你！！！</p>
+    <content><![CDATA[<p>想白嫖不想付费怎么办？Later这就教你！！！</p>
 <h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p>首先下载 <code>Typora</code> 的<a class="link"   href="https://so.csdn.net/so/search?q=%E5%AE%89%E8%A3%85%E5%8C%85&spm=1001.2101.3001.7020" >安装包 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>：<a class="link"   href="https://typora.io/" >官网(国内可能打不开) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>、<a class="link"   href="https://typoraio.cn/" >中文站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>选择你需要的版本下载，我下载了目前最新版 1.9.5</p>
 <p><img  
@@ -183,7 +183,7 @@
   <entry>
     <title>怎么把腾讯云的对象存储弄成图床？</title>
     <url>/2024/07/08/image-Hosting/</url>
-    <content><![CDATA[<h1 id="怎么把腾讯云的对象存储弄成图床？"><a href="#怎么把腾讯云的对象存储弄成图床？" class="headerlink" title="怎么把腾讯云的对象存储弄成图床？"></a>怎么把腾讯云的对象存储弄成图床？</h1><p>由于在书写个人博客的时候需要上传一些图片，视频，音频文件，然后编辑时候一般使用的都是markdown格式，然后图片的存储有时候就很麻烦，故需要一个图床来满足这个需求。</p>
+    <content><![CDATA[<p>由于在书写个人博客的时候需要上传一些图片，视频，音频文件，然后编辑时候一般使用的都是markdown格式，然后图片的存储有时候就很麻烦，故需要一个图床来满足这个需求。</p>
 <ol>
 <li><h2 id="环境的准备"><a href="#环境的准备" class="headerlink" title="环境的准备"></a>环境的准备</h2><ul>
 <li>PicGo:一个一个用于快速上传图片并获取图片 URL 链接的工具，支持目前市面上绝大部分的云服务厂商，例如：腾讯云COS，华为云COS等。 </li>
@@ -369,7 +369,7 @@
     <url>/2024/07/09/encryption/</url>
     <content><![CDATA[
 <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="这是一个错误的密码！" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="4c1d408b2fefc63a07a3c1599f748a272149cbe83ab6af68ff423e8d213e61f1">5e908a6c31a79bec4b8c2d36b47cd41bed067e07ad980d44a66868f1d03b610c480b6e4ceba7507d7553c66f8ab6d31a613505b98304b08a5b32e80c79826341fb385b078940eb55cf19c8e3698acd1518799b74aee85f820c924182bab95558e8795dbb6bca99324ad9ee0740877b16926bca439036caaa0eb0dfa8d4339c11ef42bfe2afc6a34cba355ce8e9f399378dd58dd382baf3c8a38faa4fa80ddc128df3df4a5093a7cb8154e6fa0fb0d2219f1562c48d60785394bc27a344ed3ec680320b00e94abb492209dfbe3375c95a8b6e2647d9305a41f00a4d01193c099adbd50046458a8ba687fd9112f9d9fcd7c1a1ca53c9f3fce2fef186bd6592ad688b14c4198a432f17f96a6c40ea3882c1d80ecfb72e1e83dd9523042dbd9cde54e8635b373c9c27cd3892a7649f1a68a060e0b8a7e96079c215ef165bfb019e17a4fabb13df90ec26fc616e30b2525db744e3e3c6af7f433fd8260354e9443ad208b207704484206c4bef18afebfffcd062a960cd87deec852d4f78b36215c27f4a2f4cfa629aebf98faad04c0a7e6f4e1b8470dd67c4fa34c4ebf8df46668b9a452825b175018b0bfb7f1785396638776f281301550631d308c7686a884505e3a90e4268b6a4501598e2428850e5c0a6</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="c88e23d0646628dc8d460b24fe859f79c6416bdc161e8e8209c659b70c3e16eb">5e908a6c31a79bec4b8c2d36b47cd41bbf8d9ea4eed52790601ba221b148342ba2d62018747672bcf3d9c1c463b09762c7211486553b7893adf64330a8075123e7c0650160e49cfc7204b70829671969d1ff2078c5296b4f8ec3c2f6191ca0f451f884c665f1a93f6ed16aa443751110ab72cb6c6bd2acc38d6318171745fdd8</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
