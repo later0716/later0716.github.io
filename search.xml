@@ -472,4 +472,183 @@
         <tag>MV</tag>
       </tags>
   </entry>
+  <entry>
+    <title>怎么低价买入服务器？？？</title>
+    <url>/2024/07/11/%E6%80%8E%E4%B9%88%E4%BD%8E%E4%BB%B7%E4%B9%B0%E5%85%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F%EF%BC%9F%EF%BC%9F/</url>
+    <content><![CDATA[<p>这几天我需要将博客部署到国内，因此我在阿里云和腾讯云的官网找了一些价格较低的服务器。</p>
+<h2 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h2><p>链接：<a class="link"   href="https://www.aliyun.com/benefit" >https://www.aliyun.com/benefit <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711190733496.png"
+                      alt="image-20240711190733496"
+                ></p>
+<h2 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h2><p>链接：<a class="link"   href="https://cloud.tencent.com/act/pro/Featured?from=22334" >https://cloud.tencent.com/act/pro/Featured?from=22334 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>腾讯云可以领两个红包，用于抵扣购买的费用，下面会详细介绍：</p>
+<h3 id="第一个红包"><a href="#第一个红包" class="headerlink" title="第一个红包"></a>第一个红包</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711191226304.png"
+                      alt="image-20240711191226304"
+                ></p>
+<p>添加微信之后可以拿一个10元的红包，这个红包可以给你的云存储购买流量包使用。</p>
+<h3 id="第二个红包（购买服务器的时候可以用）"><a href="#第二个红包（购买服务器的时候可以用）" class="headerlink" title="第二个红包（购买服务器的时候可以用）"></a>第二个红包（购买服务器的时候可以用）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711191521552.png"
+                      alt="image-20240711191521552"
+                ></p>
+<p>第二个红包就是这个了，微信扫描这个码可以拿到一个10元的红包，然后可以通过拉人让红包变大，最大是30，经本人测试，拉一个2块钱。</p>
+<h2 id="低价服务器在哪里？？？"><a href="#低价服务器在哪里？？？" class="headerlink" title="低价服务器在哪里？？？"></a>低价服务器在哪里？？？</h2><p>页面下拉</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711191908144.png"
+                      alt="image-20240711191908144"
+                ></p>
+<p>个人建议：服务器系统最好是选择Linux的，主要因为它的稳定性、安全性高，开源免费，性能优异，以及灵活的定制和强大的社区支持。</p>
+]]></content>
+      <categories>
+        <category>服务器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>买了服务器怎么用？？？</title>
+    <url>/2024/07/11/%E4%B9%B0%E4%BA%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F%EF%BC%9F%EF%BC%9F/</url>
+    <content><![CDATA[<p>买了服务器不知道怎么用怎么办？later这就教你！</p>
+<p>本教程以腾讯云为例。</p>
+<h2 id="买了服务器在哪里查看？"><a href="#买了服务器在哪里查看？" class="headerlink" title="买了服务器在哪里查看？"></a>买了服务器在哪里查看？</h2><ol>
+<li><p>首页，点击控制台</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711204029213.png"
+                      alt="image-20240711204029213"
+                ></p>
+</li>
+<li><p>选择服务器</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711204521270.png"
+                      alt="image-20240711204521270"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711204754683.png"
+                      alt="image-20240711204754683"
+                ></p>
+</li>
+</ol>
+<h2 id="如何修改密码？？？"><a href="#如何修改密码？？？" class="headerlink" title="如何修改密码？？？"></a>如何修改密码？？？</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711205240883.png"
+                      alt="image-20240711205240883"
+                ></p>
+<p>这个密码一定要记好！</p>
+<h2 id="一开始系统选错了，怎么换？？？"><a href="#一开始系统选错了，怎么换？？？" class="headerlink" title="一开始系统选错了，怎么换？？？"></a>一开始系统选错了，怎么换？？？</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711205547572.png"
+                      alt="image-20240711205547572"
+                ></p>
+<h2 id="怎么进入系统？？？"><a href="#怎么进入系统？？？" class="headerlink" title="怎么进入系统？？？"></a>怎么进入系统？？？</h2><p>进行系统有很多种方法，比如远程桌面，通过工具连接，直接用腾讯云的远程登陆等等</p>
+<h3 id="远程桌面"><a href="#远程桌面" class="headerlink" title="远程桌面"></a>远程桌面</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711211201691.png"
+                      alt="image-20240711211201691"
+                ></p>
+<p>点击这个进去之后输入ip地址，输入密码，就可以访问服务器了。</p>
+<h3 id="通过工具连接"><a href="#通过工具连接" class="headerlink" title="通过工具连接"></a>通过工具连接</h3><p>这边推荐一个工具：Xshell</p>
+<p>下载地址：<a class="link"   href="https://www.xshell.com/zh/free-for-home-school/" >https://www.xshell.com/zh/free-for-home-school/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711210552701.png"
+                      alt="image-20240711210552701"
+                ></p>
+<p>下载完成之后安装，之后打开会提示需要激活还是什么的，由于我已经安装过了，就说一下过程吧，就是你输入用户名，邮箱，然后会发一个邮箱给你，然后你点击邮箱里面的链接就可以使用了。</p>
+<h4 id="连接步骤"><a href="#连接步骤" class="headerlink" title="连接步骤"></a>连接步骤</h4><ol>
+<li><p>先新建连接</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711211348329.png"
+                      alt="image-20240711211348329"
+                ></p>
+</li>
+<li><p>根据图片操作，其他默认</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711211646529.png"
+                      alt="image-20240711211646529"
+                ></p>
+</li>
+<li><p>输入账号，密码</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711211829082.png"
+                      alt="image-20240711211829082"
+                ></p>
+</li>
+<li><p>把这个关掉</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711211917401.png"
+                      alt="image-20240711211917401"
+                ></p>
+</li>
+<li><p>选择这个</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711211947531.png"
+                      alt="image-20240711211947531"
+                ></p>
+</li>
+<li><p>全部配置完之后，右键选择打开，就可以使用了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711212117500.png"
+                      alt="image-20240711212117500"
+                ></p>
+</li>
+</ol>
+<h2 id="腾讯云的远程登陆"><a href="#腾讯云的远程登陆" class="headerlink" title="腾讯云的远程登陆"></a>腾讯云的远程登陆</h2><ol>
+<li><p>点击登陆</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711212313296.png"
+                      alt="image-20240711212313296"
+                ></p>
+</li>
+<li><p>输入账号密码</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711212405074.png"
+                      alt="image-20240711212405074"
+                ></p>
+</li>
+</ol>
+<h2 id="防火墙的配置"><a href="#防火墙的配置" class="headerlink" title="防火墙的配置"></a>防火墙的配置</h2><p>一般都是这么配置的，有其他需要可以添加规则进行修改</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711212518122.png"
+                      alt="image-20240711212518122"
+                ></p>
+]]></content>
+      <categories>
+        <category>服务器</category>
+      </categories>
+  </entry>
 </search>
