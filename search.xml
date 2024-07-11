@@ -511,6 +511,9 @@
       <categories>
         <category>服务器</category>
       </categories>
+      <tags>
+        <tag>服务器</tag>
+      </tags>
   </entry>
   <entry>
     <title>买了服务器怎么用？？？</title>
@@ -650,5 +653,19 @@
       <categories>
         <category>服务器</category>
       </categories>
+      <tags>
+        <tag>服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何把Hexo博客部署到服务器上</title>
+    <url>/2024/07/11/%E5%A6%82%E4%BD%95%E6%8A%8AHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>服务器</tag>
+      </tags>
   </entry>
 </search>
