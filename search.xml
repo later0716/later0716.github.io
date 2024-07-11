@@ -623,7 +623,15 @@
                       alt="image-20240711212117500"
                 ></p>
 </li>
+<li><p>点击一次性接受或者接受并保存</p>
+</li>
 </ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711220723977.png"
+                      alt="image-20240711220723977"
+                ></p>
 <h2 id="腾讯云的远程登陆"><a href="#腾讯云的远程登陆" class="headerlink" title="腾讯云的远程登陆"></a>腾讯云的远程登陆</h2><ol>
 <li><p>点击登陆</p>
 <p><img  
@@ -654,13 +662,75 @@
         <category>服务器</category>
       </categories>
       <tags>
+        <tag>Hexo</tag>
         <tag>服务器</tag>
       </tags>
   </entry>
   <entry>
     <title>如何把Hexo博客部署到服务器上</title>
     <url>/2024/07/11/%E5%A6%82%E4%BD%95%E6%8A%8AHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="连接上服务器（Linux系统）"><a href="#连接上服务器（Linux系统）" class="headerlink" title="连接上服务器（Linux系统）"></a>连接上服务器（Linux系统）</h2><p>用什么方法连接服务器都可以，只要连接上就可以。</p>
+<h2 id="安装需要的依赖："><a href="#安装需要的依赖：" class="headerlink" title="安装需要的依赖："></a>安装需要的依赖：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="安装编译工具："><a href="#安装编译工具：" class="headerlink" title="安装编译工具："></a>安装编译工具：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">yum install -y gcc perl-ExtUtils-MakeMaker package</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="检查Git是否安装："><a href="#检查Git是否安装：" class="headerlink" title="检查Git是否安装："></a>检查Git是否安装：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="安装Git：已经安装过的可以跳过这一步"><a href="#安装Git：已经安装过的可以跳过这一步" class="headerlink" title="安装Git：已经安装过的可以跳过这一步"></a>安装Git：已经安装过的可以跳过这一步</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">yum install git -y</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="添加用户并设置密码："><a href="#添加用户并设置密码：" class="headerlink" title="添加用户并设置密码："></a>添加用户并设置密码：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">useradd git </span><br><span class="line">passwd git</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="创建博客目录："><a href="#创建博客目录：" class="headerlink" title="创建博客目录："></a>创建博客目录：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir /home/blog</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="给博客目录增加相应读写权限："><a href="#给博客目录增加相应读写权限：" class="headerlink" title="给博客目录增加相应读写权限："></a>给博客目录增加相应读写权限：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">chmod -R a+rw /home/blog</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="建立Git仓库："><a href="#建立Git仓库：" class="headerlink" title="建立Git仓库："></a>建立Git仓库：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">cd /home/git git init --bare blog.git</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="给Git目录增加相应读写权限："><a href="#给Git目录增加相应读写权限：" class="headerlink" title="给Git目录增加相应读写权限："></a>给Git目录增加相应读写权限：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">chmod -R a+rw /home/git</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="新建钩子文件："><a href="#新建钩子文件：" class="headerlink" title="新建钩子文件："></a>新建钩子文件：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">vim /home/git/blog.git/hooks/post-receive</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="在文件中添加："><a href="#在文件中添加：" class="headerlink" title="在文件中添加："></a>在文件中添加：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">git --work-tree=/home/blog --git-dir=/home/git/blog.git checkout -f </span><br></pre></td></tr></table></figure></div>
+
+<h2 id="给钩子文件增加可执行权限："><a href="#给钩子文件增加可执行权限：" class="headerlink" title="给钩子文件增加可执行权限："></a>给钩子文件增加可执行权限：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">chmod +x /home/git/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="安装Nginx："><a href="#安装Nginx：" class="headerlink" title="安装Nginx："></a>安装Nginx：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">yum install nginx -y</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="启动Nginx："><a href="#启动Nginx：" class="headerlink" title="启动Nginx："></a>启动Nginx：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="查看Nginx配置文件路径："><a href="#查看Nginx配置文件路径：" class="headerlink" title="查看Nginx配置文件路径："></a>查看Nginx配置文件路径：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nginx -t </span><br></pre></td></tr></table></figure></div>
+
+<h2 id="修改Nginx的配置文件："><a href="#修改Nginx的配置文件：" class="headerlink" title="修改Nginx的配置文件："></a>修改Nginx的配置文件：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></div>
+
+<p>注意要用自己主机上的Nginx的配置文件路径！！！</p>
+<p>如果是按我的步骤来的话，没有做任何改动，可以直接复制代码</p>
+<h2 id="重启Nginx："><a href="#重启Nginx：" class="headerlink" title="重启Nginx："></a>重启Nginx：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart nginx.service</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="在Windows端（就是本地）博客目录下安装部署插件："><a href="#在Windows端（就是本地）博客目录下安装部署插件：" class="headerlink" title="在Windows端（就是本地）博客目录下安装部署插件："></a>在Windows端（就是本地）博客目录下安装部署插件：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="修改Hexo的配置文件（就是-config-yml）："><a href="#修改Hexo的配置文件（就是-config-yml）：" class="headerlink" title="修改Hexo的配置文件（就是_config.yml）："></a>修改Hexo的配置文件（就是_config.yml）：</h2><div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy: type:</span> <span class="string">git</span> </span><br><span class="line"><span class="attr">repository:</span> <span class="string">(输用户名，如git)@(输服务器IP地址):/home/git/blog.git</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711220406904.png"
+                      alt="image-20240711220406904"
+                ></p>
+<h2 id="测试-SSH-连接"><a href="#测试-SSH-连接" class="headerlink" title="测试 SSH 连接"></a>测试 SSH 连接</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@（输服务器IP地址）</span><br></pre></td></tr></table></figure></div>
+
+<p>输入这段代码之后，还要输入密码，密码是你自己设置的千万不要忘记，如果你是按照我的步骤弄的，没有修改过代码，那你的密码就是git。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240711220037143.png"
+                      alt="image-20240711220037143"
+                ></p>
+<p>之后在键盘按下<code>CTRL+C</code>退出</p>
+<h2 id="Hexo-三件套"><a href="#Hexo-三件套" class="headerlink" title="Hexo 三件套"></a>Hexo 三件套</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo c</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></div>
+
+<p><code>hexo d</code>的时候也会要你输入密码，一样的还是git</p>
+<p>通过以上的步骤就可以把博客部署到服务器上了。</p>
+]]></content>
       <categories>
         <category>服务器</category>
       </categories>
