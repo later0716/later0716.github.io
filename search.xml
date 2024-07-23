@@ -640,11 +640,11 @@
 
 <h2 id="给博客目录增加相应读写权限："><a href="#给博客目录增加相应读写权限：" class="headerlink" title="给博客目录增加相应读写权限："></a>给博客目录增加相应读写权限：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">chmod -R a+rw /home/blog</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="建立Git仓库："><a href="#建立Git仓库：" class="headerlink" title="建立Git仓库："></a>建立Git仓库：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">cd /home/git git init --bare blog.git</span><br></pre></td></tr></table></figure></div>
+<h2 id="建立Git仓库："><a href="#建立Git仓库：" class="headerlink" title="建立Git仓库："></a>建立Git仓库：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">cd /home/git </span><br><span class="line">git init --bare blog.git</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="给Git目录增加相应读写权限："><a href="#给Git目录增加相应读写权限：" class="headerlink" title="给Git目录增加相应读写权限："></a>给Git目录增加相应读写权限：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">chmod -R a+rw /home/git</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="新建钩子文件："><a href="#新建钩子文件：" class="headerlink" title="新建钩子文件："></a>新建钩子文件：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">vim /home/git/blog.git/hooks/post-receive</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h2 id="新建钩子文件："><a href="#新建钩子文件：" class="headerlink" title="新建钩子文件："></a>新建钩子文件：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">vim /home/git/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="在文件中添加："><a href="#在文件中添加：" class="headerlink" title="在文件中添加："></a>在文件中添加：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">git --work-tree=/home/blog --git-dir=/home/git/blog.git checkout -f </span><br></pre></td></tr></table></figure></div>
 
@@ -659,6 +659,12 @@
 <h2 id="修改Nginx的配置文件："><a href="#修改Nginx的配置文件：" class="headerlink" title="修改Nginx的配置文件："></a>修改Nginx的配置文件：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></div>
 
 <p>注意要用自己主机上的Nginx的配置文件路径！！！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/cd8e29547dd45447562f30f044d8d4b.png"
+                      alt="cd8e29547dd45447562f30f044d8d4b"
+                ></p>
 <p>如果是按我的步骤来的话，没有做任何改动，可以直接复制代码</p>
 <h2 id="重启Nginx："><a href="#重启Nginx：" class="headerlink" title="重启Nginx："></a>重启Nginx：</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart nginx.service</span><br></pre></td></tr></table></figure></div>
 
