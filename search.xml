@@ -744,4 +744,83 @@
         <tag>服务器</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mock.js怎么用？</title>
+    <url>/2024/07/24/mock-js%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F/</url>
+    <content><![CDATA[<p>mock.js其实就是把ajax发出去的请求给拦截住，之后返回假数据。</p>
+<p>要使用mock首先需要用npm下axios和mockjs</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install axios mockjs</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240723233930227.png"
+                      alt="image-20240723233930227"
+                ></p>
+<h2 id="1-建立mock文件夹"><a href="#1-建立mock文件夹" class="headerlink" title="1.建立mock文件夹"></a>1.建立mock文件夹</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240723234402659.png"
+                      alt="image-20240723234402659"
+                ></p>
+<h2 id="2-填入假数据"><a href="#2-填入假数据" class="headerlink" title="2.填入假数据"></a>2.填入假数据</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240723234849417.png"
+                      alt="image-20240723234849417"
+                ></p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span><span class="string">&quot;这是假数据1&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span><span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span><span class="string">&quot;这是假数据2&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-建立service-js"><a href="#3-建立service-js" class="headerlink" title="3.建立service.js"></a>3.建立service.js</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240723235040980.png"
+                      alt="image-20240723235040980"
+                ></p>
+<p>建立假接口，返回假数据：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240723235543902.png"
+                      alt="image-20240723235543902"
+                ></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Mock</span> <span class="keyword">from</span> <span class="string">&#x27;mockjs&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> msg <span class="keyword">from</span> <span class="string">&#x27;../index/msg/index.json&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Mock</span>.<span class="title function_">mock</span>(<span class="string">&#x27;/mock/getMsg&#x27;</span>, <span class="string">&#x27;get&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">data</span>: msg</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="4-在main-js里面导入indexService-js"><a href="#4-在main-js里面导入indexService-js" class="headerlink" title="4.在main.js里面导入indexService.js"></a>4.在main.js里面导入indexService.js</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240723235753662.png"
+                      alt="image-20240723235753662"
+                ></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@/mock/index/indexService&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">createApp</span>(<span class="title class_">App</span>).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="5-调用假接口"><a href="#5-调用假接口" class="headerlink" title="5.调用假接口"></a>5.调用假接口</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import axios from &quot;axios&quot;;</span><br><span class="line">import &#123; reactive &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">const msg = reactive(&#123; list: [] &#125;);</span><br><span class="line"></span><br><span class="line">axios.get(&#x27;/mock/getMsg&#x27;)</span><br><span class="line">    .then(res =&gt; &#123;</span><br><span class="line">        msg.list = res.data.data</span><br><span class="line">        console.log(res);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li v-for=&quot;(item, index) in msg.list&quot; :key=&quot;index&quot;&gt;&#123;&#123; item &#125;&#125;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;&lt;/style&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240724000850082.png"
+                      alt="image-20240724000850082"
+                ></p>
+<h2 id="mock怎么接收数据？"><a href="#mock怎么接收数据？" class="headerlink" title="mock怎么接收数据？"></a>mock怎么接收数据？</h2><p>app.vue:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import axios from &quot;axios&quot;;</span><br><span class="line">    </span><br><span class="line">const send = () =&gt; &#123;</span><br><span class="line">    axios.post(&#x27;/mock/poatSend&#x27;,&#123;</span><br><span class="line">        msg:1</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line">        console.log(res);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;button @click=&quot;send&quot;&gt;发送数据&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;&lt;/style&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>indexService.js:</p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Mock</span> <span class="keyword">from</span> <span class="string">&#x27;mockjs&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Mock</span>.<span class="title function_">mock</span>(<span class="string">&#x27;/mock/poatSend&#x27;</span>, <span class="string">&#x27;post&#x27;</span>, <span class="function">(<span class="params">options</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; msg &#125; = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(options.<span class="property">body</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">data</span>: <span class="string">&quot;你发送的是：&quot;</span> + msg</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240724002412521.png"
+                      alt="image-20240724002412521"
+                ></p>
+<p>项目下载：<a class="link"   href="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/project/mock.zip" >点我下载dome <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>mock.js</tag>
+      </tags>
+  </entry>
 </search>
