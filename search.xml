@@ -805,4 +805,37 @@
         <tag>mock.js</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Linux-yum镜像源问题</title>
+    <url>/2024/07/22/Linux-yum%E9%95%9C%E5%83%8F%E6%BA%90%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>yum的工作原理是从我们所配置的远程仓库下载rpm包，然后进行安装，远程仓库的配置文件位于<code>/etc/yum.repos.d/</code>目录中。</p>
+<p>远程仓库可手动配置，也可在线配置，下面在线配置</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# yum -y install epel-release </span><br></pre></td></tr></table></figure></div>
+
+<p>但是直接用这个命令的时候可能会碰到我这个问题：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Determining fastest mirrors</span><br><span class="line">Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&amp;<span class="built_in">arch</span>=x86_64&amp;repo=os&amp;infra=stock error was</span><br><span class="line">12: Timeout on http://mirrorlist.centos.org/?release=7&amp;<span class="built_in">arch</span>=x86_64&amp;repo=os&amp;infra=stock: (28, <span class="string">&#x27;Resolving timed out after 30565 milliseconds&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> One of the configured repositories failed (未知),</span><br><span class="line"> and yum doesn<span class="string">&#x27;t have enough cached data to continue. At this point the only</span></span><br></pre></td></tr></table></figure></div>
+
+<p>出现这种错误通常是因为你的服务器无法连接到 CentOS 的镜像服务器，可能是网络问题或 DNS 配置问题。我是通过手动配置镜像源来解决这个问题的，过程如下：</p>
+<h2 id="手动设置镜像源"><a href="#手动设置镜像源" class="headerlink" title="手动设置镜像源"></a>手动设置镜像源</h2><h3 id="1-编辑-CentOS-Base-repo-文件："><a href="#1-编辑-CentOS-Base-repo-文件：" class="headerlink" title="1.编辑 CentOS-Base.repo 文件："></a>1.编辑 <code>CentOS-Base.repo</code> 文件：</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vi /etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-直接删掉里面的全部的东西-按esc，之后一直按D键就可以了-，换成使用阿里云镜像源-按i可以输入-："><a href="#2-直接删掉里面的全部的东西-按esc，之后一直按D键就可以了-，换成使用阿里云镜像源-按i可以输入-：" class="headerlink" title="2.直接删掉里面的全部的东西(按esc，之后一直按D键就可以了)，换成使用阿里云镜像源(按i可以输入)："></a>2.直接删掉里面的全部的东西(按esc，之后一直按D键就可以了)，换成使用阿里云镜像源(按i可以输入)：</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">[base]</span><br><span class="line">name=CentOS-$releasever - Base</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">mirrorlist=http://mirrorlist.centos.org/?release=<span class="variable">$releasever</span>&amp;<span class="built_in">arch</span>=<span class="variable">$basearch</span>&amp;repo=os</span></span><br><span class="line">baseurl=http://mirrors.aliyun.com/centos/$releasever/os/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><span class="line"></span><br><span class="line">[updates]</span><br><span class="line">name=CentOS-$releasever - Updates</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">mirrorlist=http://mirrorlist.centos.org/?release=<span class="variable">$releasever</span>&amp;<span class="built_in">arch</span>=<span class="variable">$basearch</span>&amp;repo=updates</span></span><br><span class="line">baseurl=http://mirrors.aliyun.com/centos/$releasever/updates/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><span class="line"></span><br><span class="line">[extras]</span><br><span class="line">name=CentOS-$releasever - Extras</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">mirrorlist=http://mirrorlist.centos.org/?release=<span class="variable">$releasever</span>&amp;<span class="built_in">arch</span>=<span class="variable">$basearch</span>&amp;repo=extras</span></span><br><span class="line">baseurl=http://mirrors.aliyun.com/centos/$releasever/extras/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-保存并退出文件"><a href="#3-保存并退出文件" class="headerlink" title="3.保存并退出文件"></a>3.保存并退出文件</h3><p>按下esc键之后输入<code>:</code>号在输入wq，按下回车</p>
+<h3 id="4-清理缓存并重试安装-epel-release"><a href="#4-清理缓存并重试安装-epel-release" class="headerlink" title="4.清理缓存并重试安装 epel-release"></a>4.清理缓存并重试安装 <code>epel-release</code></h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum clean all</span><br><span class="line"><span class="built_in">sudo</span> yum makecache</span><br><span class="line"><span class="built_in">sudo</span> yum -y install epel-release</span><br></pre></td></tr></table></figure></div>
+
+<p>通过使用国内的镜像源，应该能解决由于网络连接问题导致的超时错误。如果依然出现问题，可以更换你的 <code>/etc/resolv.conf</code> 文件使用公共 DNS 服务器：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vi /etc/resolv.conf</span><br></pre></td></tr></table></figure></div>
+
+<p>添加以下内容：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 223.5.5.5  <span class="comment"># 阿里云公共DNS</span></span><br><span class="line">nameserver 223.6.6.6  <span class="comment"># 阿里云公共DNS</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后再次清理缓存并重试安装。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>yum</tag>
+      </tags>
+  </entry>
 </search>

@@ -13,19 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://later0716.github.io/archives/2024/07/"/>
+    <link rel="canonical" href="https://later0716.github.io/2024/07/22/linux-yum镜像源问题/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="later的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Later.">
-<meta property="og:url" content="https://later0716.github.io/archives/2024/07/index.html">
+        <meta name="description" content="yum的工作原理是从我们所配置的远程仓库下载rpm包，然后进行安装，远程仓库的配置文件位于&#x2F;etc&#x2F;yum.repos.d&#x2F;目录中。 远程仓库可手动配置，也可在线配置，下面在线配置 1[root@localhost ~]# yum -y install epel-release   但是直接用这个命令的时候可能会碰到我这个问题： 12345678已加载插件：fastestmirror, langp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux-yum镜像源问题">
+<meta property="og:url" content="https://later0716.github.io/2024/07/22/Linux-yum%E9%95%9C%E5%83%8F%E6%BA%90%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Later.">
-<meta property="og:description" content="later的个人博客">
+<meta property="og:description" content="yum的工作原理是从我们所配置的远程仓库下载rpm包，然后进行安装，远程仓库的配置文件位于&#x2F;etc&#x2F;yum.repos.d&#x2F;目录中。 远程仓库可手动配置，也可在线配置，下面在线配置 1[root@localhost ~]# yum -y install epel-release   但是直接用这个命令的时候可能会碰到我这个问题： 12345678已加载插件：fastestmirror, langp">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-22T09:24:35.000Z">
+<meta property="article:modified_time" content="2024-08-01T11:16:31.747Z">
 <meta property="article:author" content="later.">
+<meta property="article:tag" content="yum">
 <meta name="twitter:card" content="summary">
     
     
@@ -38,7 +41,7 @@
     
     <title>
         
-            归档: 2024/7 -
+            Linux-yum镜像源问题 -
         
         Later
     </title>
@@ -424,137 +427,223 @@
             <div class="main-content">
 
                 
-                    <div class="archive-container shadow-none hover:shadow-none sm:shadow-redefine sm:hover:shadow-redefine-hover">
-    
-<div class="archive-list-container">
-    
-        <section class="archive-item mb-spacing-unit last:mb-0">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2024</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">12</span>
-            </div>
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
             
-            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Linux-yum镜像源问题</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/later.jpg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Later</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-07-22 17:24:35</span>
+        <span class="mobile">2024-07-22 17:24:35</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-08-01 19:16:31</span>
+            <span class="mobile">2024-08-01 19:16:31</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
                 
-                    
-                    
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-24'>
-                    
-                    <a href="/2024/07/24/mock-js%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">mock.js怎么用？</span>
-                    </a>
-                    
                 
-                    
                     
                         
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-22'>
+                        <li>
+                            <a href="/categories/linux/">linux</a>&nbsp;
+                        </li>
                     
-                    <a href="/2024/07/22/Linux-yum%E9%95%9C%E5%83%8F%E6%BA%90%E9%97%AE%E9%A2%98/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">Linux-yum镜像源问题</span>
-                    </a>
                     
                 
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-11'>
-                    
-                    <a href="/2024/07/11/%E5%A6%82%E4%BD%95%E6%8A%8AHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">如何把Hexo博客部署到服务器上</span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/11/%E4%B9%B0%E4%BA%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F%EF%BC%9F%EF%BC%9F/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">买了服务器怎么用？？？</span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/11/%E6%80%8E%E4%B9%88%E4%BD%8E%E4%BB%B7%E4%B9%B0%E5%85%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F%EF%BC%9F%EF%BC%9F/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">怎么低价买入服务器？？？</span>
-                    </a>
-                    
-                
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-09'>
-                    
-                    <a href="/2024/07/09/switch-Themes/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">默认主题太丑？怎么切换主题？</span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/09/encryption/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">这是一篇加密文章，需要获取内容请联系作者获取密码</span>
-                    </a>
-                    
-                
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-08'>
-                    
-                    <a href="/2024/07/08/crack-Typora/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">怎么破解Typora？</span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/08/image-Hosting/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">怎么把腾讯云的对象存储弄成图床？</span>
-                    </a>
-                    
-                
-                    
-                    
-                        
-                            </li>
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-07'>
-                    
-                    <a href="/2024/07/07/delete-Article/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">发错了，怎么删除博客文章？？？</span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/07/release-Blog/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">如何发布博客？</span>
-                    </a>
-                    
-                
-                    
-                    
-                    <a href="/2024/07/07/build-Blog/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">如何使用Hexo搭建个人博客？</span>
-                    </a>
-                    
-                
-                </li> <!-- Ensure the last item is properly closed -->
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/yum/">yum</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>570 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
+        </span>
+    
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>yum的工作原理是从我们所配置的远程仓库下载rpm包，然后进行安装，远程仓库的配置文件位于<code>/etc/yum.repos.d/</code>目录中。</p>
+<p>远程仓库可手动配置，也可在线配置，下面在线配置</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum -y install epel-release </span><br></pre></td></tr></table></figure></div>
+
+<p>但是直接用这个命令的时候可能会碰到我这个问题：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Determining fastest mirrors</span><br><span class="line">Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&amp;<span class="built_in">arch</span>=x86_64&amp;repo=os&amp;infra=stock error was</span><br><span class="line">12: Timeout on http://mirrorlist.centos.org/?release=7&amp;<span class="built_in">arch</span>=x86_64&amp;repo=os&amp;infra=stock: (28, <span class="string">&#x27;Resolving timed out after 30565 milliseconds&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> One of the configured repositories failed (未知),</span><br><span class="line"> and yum doesn<span class="string">&#x27;t have enough cached data to continue. At this point the only</span></span><br></pre></td></tr></table></figure></div>
+
+<p>出现这种错误通常是因为你的服务器无法连接到 CentOS 的镜像服务器，可能是网络问题或 DNS 配置问题。我是通过手动配置镜像源来解决这个问题的，过程如下：</p>
+<h2 id="手动设置镜像源"><a href="#手动设置镜像源" class="headerlink" title="手动设置镜像源"></a>手动设置镜像源</h2><h3 id="1-编辑-CentOS-Base-repo-文件："><a href="#1-编辑-CentOS-Base-repo-文件：" class="headerlink" title="1.编辑 CentOS-Base.repo 文件："></a>1.编辑 <code>CentOS-Base.repo</code> 文件：</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vi /etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-直接删掉里面的全部的东西-按esc，之后一直按D键就可以了-，换成使用阿里云镜像源-按i可以输入-："><a href="#2-直接删掉里面的全部的东西-按esc，之后一直按D键就可以了-，换成使用阿里云镜像源-按i可以输入-：" class="headerlink" title="2.直接删掉里面的全部的东西(按esc，之后一直按D键就可以了)，换成使用阿里云镜像源(按i可以输入)："></a>2.直接删掉里面的全部的东西(按esc，之后一直按D键就可以了)，换成使用阿里云镜像源(按i可以输入)：</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[base]</span><br><span class="line">name=CentOS-$releasever - Base</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">mirrorlist=http://mirrorlist.centos.org/?release=<span class="variable">$releasever</span>&amp;<span class="built_in">arch</span>=<span class="variable">$basearch</span>&amp;repo=os</span></span><br><span class="line">baseurl=http://mirrors.aliyun.com/centos/$releasever/os/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><span class="line"></span><br><span class="line">[updates]</span><br><span class="line">name=CentOS-$releasever - Updates</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">mirrorlist=http://mirrorlist.centos.org/?release=<span class="variable">$releasever</span>&amp;<span class="built_in">arch</span>=<span class="variable">$basearch</span>&amp;repo=updates</span></span><br><span class="line">baseurl=http://mirrors.aliyun.com/centos/$releasever/updates/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br><span class="line"></span><br><span class="line">[extras]</span><br><span class="line">name=CentOS-$releasever - Extras</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">mirrorlist=http://mirrorlist.centos.org/?release=<span class="variable">$releasever</span>&amp;<span class="built_in">arch</span>=<span class="variable">$basearch</span>&amp;repo=extras</span></span><br><span class="line">baseurl=http://mirrors.aliyun.com/centos/$releasever/extras/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-保存并退出文件"><a href="#3-保存并退出文件" class="headerlink" title="3.保存并退出文件"></a>3.保存并退出文件</h3><p>按下esc键之后输入<code>:</code>号在输入wq，按下回车</p>
+<h3 id="4-清理缓存并重试安装-epel-release"><a href="#4-清理缓存并重试安装-epel-release" class="headerlink" title="4.清理缓存并重试安装 epel-release"></a>4.清理缓存并重试安装 <code>epel-release</code></h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum clean all</span><br><span class="line"><span class="built_in">sudo</span> yum makecache</span><br><span class="line"><span class="built_in">sudo</span> yum -y install epel-release</span><br></pre></td></tr></table></figure></div>
+
+<p>通过使用国内的镜像源，应该能解决由于网络连接问题导致的超时错误。如果依然出现问题，可以更换你的 <code>/etc/resolv.conf</code> 文件使用公共 DNS 服务器：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vi /etc/resolv.conf</span><br></pre></td></tr></table></figure></div>
+
+<p>添加以下内容：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nameserver 223.5.5.5  <span class="comment"># 阿里云公共DNS</span></span><br><span class="line">nameserver 223.6.6.6  <span class="comment"># 阿里云公共DNS</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后再次清理缓存并重试安装。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> Linux-yum镜像源问题</li>
+        <li><strong>作者:</strong> Later</li>
+        <li><strong>创建于
+                :</strong> 2024-07-22 17:24:35</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-08-01 19:16:31
+            </li>
+        
+        <li>
+            <strong>链接:</strong> http://www.later0716.top/2024/07/22/Linux-yum镜像源问题/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                版权所有 &#169 Later，禁止转载。
+            
+        </li>
+    </ul>
 </div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/yum/">#yum</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/07/24/mock-js%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">mock.js怎么用？</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/11/%E5%A6%82%E4%BD%95%E6%8A%8AHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">如何把Hexo博客部署到服务器上</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">Linux-yum镜像源问题</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-text">手动设置镜像源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E8%BE%91-CentOS-Base-repo-%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="nav-text">1.编辑 CentOS-Base.repo 文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%9B%B4%E6%8E%A5%E5%88%A0%E6%8E%89%E9%87%8C%E9%9D%A2%E7%9A%84%E5%85%A8%E9%83%A8%E7%9A%84%E4%B8%9C%E8%A5%BF-%E6%8C%89esc%EF%BC%8C%E4%B9%8B%E5%90%8E%E4%B8%80%E7%9B%B4%E6%8C%89D%E9%94%AE%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86-%EF%BC%8C%E6%8D%A2%E6%88%90%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E6%BA%90-%E6%8C%89i%E5%8F%AF%E4%BB%A5%E8%BE%93%E5%85%A5-%EF%BC%9A"><span class="nav-text">2.直接删掉里面的全部的东西(按esc，之后一直按D键就可以了)，换成使用阿里云镜像源(按i可以输入)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%80%80%E5%87%BA%E6%96%87%E4%BB%B6"><span class="nav-text">3.保存并退出文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98%E5%B9%B6%E9%87%8D%E8%AF%95%E5%AE%89%E8%A3%85-epel-release"><span class="nav-text">4.清理缓存并重试安装 epel-release</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
 
                 
 
@@ -632,6 +721,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
