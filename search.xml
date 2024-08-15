@@ -858,7 +858,7 @@
 <p>编写test.vue:</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;p&gt;我是测试&lt;/p&gt;</span><br><span class="line">  &lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">  p&#123;</span><br><span class="line">    color: $primary-color;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></div>
 
-<p>在控制台输入npm run dev查看效果：</p>
+<p>在控制台输入<code>npm run dev</code>查看效果：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
