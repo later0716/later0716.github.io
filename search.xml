@@ -866,12 +866,13 @@
                       alt="image-20240815183013430"
                 ></p>
 <p>完美显示！</p>
-<p>局部引用和这个方法差不多，就不演示了。<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image.png"
-                      alt="alt text"
-                ></p>
+<p>局部引用和这个方法差不多，就不演示了。</p>
 ]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
   </entry>
 </search>
