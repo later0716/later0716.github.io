@@ -875,4 +875,17 @@
         <tag>css</tag>
       </tags>
   </entry>
+  <entry>
+    <title>前端代理转发</title>
+    <url>/2024/08/18/%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%90%86%E8%BD%AC%E5%8F%91/</url>
+    <content><![CDATA[<p>代理转发就是将请求转发到其他服务器，一般用于解决跨域问题。<br>在学习若依的时候，发现若依的代码中，有配置代理转发，如下：</p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vite 相关配置</span></span><br><span class="line">    <span class="attr">server</span>: &#123;</span><br><span class="line">      <span class="attr">port</span>: <span class="number">81</span>,</span><br><span class="line">      <span class="attr">host</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">open</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">proxy</span>: &#123;</span><br><span class="line">        <span class="comment">// https://cn.vitejs.dev/config/#server-proxy</span></span><br><span class="line">        <span class="string">&#x27;/dev-api&#x27;</span>: &#123;</span><br><span class="line">          <span class="attr">target</span>: <span class="string">&#x27;http://localhost:8080&#x27;</span>,</span><br><span class="line">          <span class="comment">// target: &#x27;https://api.wzs.pub/mock/13&#x27;,</span></span><br><span class="line">          <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">          <span class="attr">rewrite</span>: <span class="function">(<span class="params">p</span>) =&gt;</span> p.<span class="title function_">replace</span>(<span class="regexp">/^\/dev-api/</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure></div>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>跨域</tag>
+        <tag>代理</tag>
+      </tags>
+  </entry>
 </search>
