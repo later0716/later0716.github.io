@@ -1083,4 +1083,98 @@
         <tag>加密</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mybatisplus和mybatisX</title>
+    <url>/2024/08/20/mybatisplus%E5%92%8CmybatisX/</url>
+    <content><![CDATA[<p>MyBatis Plus 和 MyBatisX 是与 MyBatis 相关的两个工具或扩展，但它们的用途和功能各不相同。以下是对它们的详细介绍：</p>
+<h3 id="1-MyBatis-Plus"><a href="#1-MyBatis-Plus" class="headerlink" title="1. MyBatis Plus"></a>1. MyBatis Plus</h3><p><strong>MyBatis Plus (MP)</strong> 是 MyBatis 的增强版，它在 MyBatis 的基础上进行了扩展，提供了更多开箱即用的功能，从而减少了开发人员的工作量。它的主要目标是提高开发效率，同时保持 MyBatis 的灵活性和可扩展性。</p>
+<h4 id="主要特性："><a href="#主要特性：" class="headerlink" title="主要特性："></a>主要特性：</h4><ul>
+<li><strong>无代码生成器</strong>：提供了丰富的 CRUD（Create, Read, Update, Delete）接口，几乎可以做到零代码 CRUD 操作。</li>
+<li><strong>全局配置</strong>：支持全局配置，便于统一管理 MyBatis 的相关设置。</li>
+<li><strong>插件支持</strong>：内置分页插件、性能分析插件、乐观锁插件、SQL 执行分析插件等，提供了增强的功能。</li>
+<li><strong>代码生成器</strong>：提供代码生成器，能够根据数据库表快速生成实体类、Mapper 接口、Service、Controller 等代码。</li>
+<li><strong>条件构造器</strong>：提供链式调用的条件构造器，简化 SQL 语句的书写。</li>
+</ul>
+<h4 id="使用场景："><a href="#使用场景：" class="headerlink" title="使用场景："></a>使用场景：</h4><ul>
+<li>快速开发项目中大量的增删改查操作。</li>
+<li>需要较多动态 SQL 的项目，MyBatis Plus 提供了非常灵活的条件构造器。</li>
+<li>需要分页查询、数据审计（如创建时间、更新时间记录）等常见功能的场景。</li>
+</ul>
+<h4 id="示例代码："><a href="#示例代码：" class="headerlink" title="示例代码："></a>示例代码：</h4><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 示例：使用 MyBatis Plus 进行简单的查询操作</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getUsers</span><span class="params">()</span> &#123;</span><br><span class="line">    QueryWrapper&lt;User&gt; queryWrapper = <span class="keyword">new</span> <span class="title class_">QueryWrapper</span>&lt;&gt;();</span><br><span class="line">    queryWrapper.eq(<span class="string">&quot;age&quot;</span>, <span class="number">20</span>);</span><br><span class="line">    List&lt;User&gt; users = userMapper.selectList(queryWrapper);</span><br><span class="line">    users.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-MyBatisX"><a href="#2-MyBatisX" class="headerlink" title="2. MyBatisX"></a>2. MyBatisX</h3><p><strong>MyBatisX</strong> 是一款专门为 MyBatis 和 MyBatis Plus 提供支持的 IntelliJ IDEA 插件。它旨在提高开发人员在使用 MyBatis 及其增强框架时的开发效率。该插件通过集成各种智能提示和自动化功能，帮助开发人员更快、更高效地完成开发任务。</p>
+<h4 id="主要功能："><a href="#主要功能：" class="headerlink" title="主要功能："></a>主要功能：</h4><ul>
+<li><strong>Mapper XML 文件的代码提示</strong>：提供 Mapper XML 文件中标签、属性、SQL 语句等的智能提示和补全。</li>
+<li><strong>SQL 语句预览</strong>：在编写 XML 中的 SQL 语句时，可以实时预览最终的 SQL 语句。</li>
+<li><strong>动态 SQL 支持</strong>：提供对 MyBatis 中动态 SQL 的智能分析和提示功能。</li>
+<li><strong>双向跳转</strong>：在 Mapper 接口方法和对应的 XML 映射文件中的 SQL 语句之间支持快速跳转。</li>
+<li><strong>代码生成</strong>：支持从数据库表生成 MyBatis 的基础代码（如实体类、Mapper、Service 等）。</li>
+</ul>
+<h4 id="使用场景：-1"><a href="#使用场景：-1" class="headerlink" title="使用场景："></a>使用场景：</h4><ul>
+<li>使用 IntelliJ IDEA 进行 MyBatis 或 MyBatis Plus 项目开发时，需要增强 IDE 对这些框架的支持。</li>
+<li>需要频繁编写 Mapper XML 文件的项目，MyBatisX 可以大幅提高开发效率。</li>
+</ul>
+<h4 id="示例功能截图（假设为文本描述）："><a href="#示例功能截图（假设为文本描述）：" class="headerlink" title="示例功能截图（假设为文本描述）："></a>示例功能截图（假设为文本描述）：</h4><ul>
+<li>当你在 IDEA 中打开一个 Mapper 接口时，MyBatisX 会为你提供接口方法和 XML 文件中 SQL 语句之间的跳转功能。</li>
+<li>当你在 XML 文件中编写 SQL 语句时，插件会自动补全标签名、属性名等，极大地减少了手动输入的工作量。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><strong>MyBatis Plus</strong> 是 MyBatis 的一个增强工具，提供了大量的开箱即用功能，适合快速开发和减少重复代码。</li>
+<li><strong>MyBatisX</strong> 是一款 IDEA 插件，主要用来提升开发 MyBatis 和 MyBatis Plus 项目时的效率，通过智能提示、自动补全、代码生成等功能，帮助开发人员更快地完成开发任务。</li>
+</ul>
+<p>两者可以结合使用：MyBatis Plus 用于简化业务逻辑开发，MyBatisX 用于提高开发效率。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>excel导入导出工具</title>
+    <url>/2024/08/20/excel%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>EasyExcel 是阿里巴巴开源的一款基于 Java 的高效处理 Excel 文件的工具库。相比于传统的 Apache POI 等 Excel 处理库，EasyExcel 更加轻量和高效，尤其是在处理大文件时表现得更加出色。</p>
+<h3 id="EasyExcel-的主要特点："><a href="#EasyExcel-的主要特点：" class="headerlink" title="EasyExcel 的主要特点："></a>EasyExcel 的主要特点：</h3><ol>
+<li><p><strong>高性能</strong>：</p>
+<ul>
+<li>EasyExcel 通过减少内存占用，能够高效地处理大数据量的 Excel 文件，尤其适合导入和导出大文件。</li>
+<li>读取时使用了 <code>SAX</code> 模式，避免了将整个文件加载到内存中的问题。</li>
+</ul>
+</li>
+<li><p><strong>简洁易用</strong>：</p>
+<ul>
+<li>EasyExcel 提供了简单易用的 API，可以快速上手并完成常见的 Excel 操作，如读取、写入、导出等。</li>
+<li>代码量少，使用方便。</li>
+</ul>
+</li>
+<li><p><strong>支持 Excel 2007 及以上版本</strong>：</p>
+<ul>
+<li>EasyExcel 支持 <code>.xlsx</code> 文件格式，但不支持 <code>.xls</code> 格式（Excel 2003 及以前版本的文件格式）。</li>
+</ul>
+</li>
+<li><p><strong>注解支持</strong>：</p>
+<ul>
+<li>EasyExcel 允许通过注解直接在 Java 类中配置 Excel 的导入导出规则，如列名映射等，非常方便。</li>
+</ul>
+</li>
+<li><p><strong>支持自定义转换</strong>：</p>
+<ul>
+<li>用户可以自定义数据的读写转换逻辑，处理复杂的数据类型和格式。</li>
+</ul>
+</li>
+</ol>
+<h3 id="使用场景："><a href="#使用场景：" class="headerlink" title="使用场景："></a>使用场景：</h3><ul>
+<li><strong>大规模数据导入导出</strong>：适用于需要处理百万级别以上行数据的场景，如财务报表、用户数据导入导出等。</li>
+<li><strong>实时生成 Excel 文件</strong>：适用于需要在服务端实时生成 Excel 文件并提供下载的场景，如后台管理系统的报表导出等。</li>
+</ul>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><p>下面是一个简单的导出 Excel 的示例：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExcelExportExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建数据列表</span></span><br><span class="line">        List&lt;DemoData&gt; data = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        data.add(<span class="keyword">new</span> <span class="title class_">DemoData</span>(<span class="string">&quot;张三&quot;</span>, <span class="number">20</span>));</span><br><span class="line">        data.add(<span class="keyword">new</span> <span class="title class_">DemoData</span>(<span class="string">&quot;李四&quot;</span>, <span class="number">30</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 导出 Excel 文件</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">fileName</span> <span class="operator">=</span> <span class="string">&quot;test.xlsx&quot;</span>;</span><br><span class="line">        EasyExcel.write(fileName, DemoData.class).sheet(<span class="string">&quot;Sheet1&quot;</span>).doWrite(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DemoData</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DemoData</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getter 和 Setter 方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>在这个例子中，<code>DemoData</code> 类定义了 Excel 文件中每一行的数据结构，而 <code>EasyExcel.write</code> 方法用于将数据写入到 Excel 文件中。</p>
+<h3 id="项目集成"><a href="#项目集成" class="headerlink" title="项目集成"></a>项目集成</h3><div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--  excel处理工具--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>easyexcel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>EasyExcel 是一个非常适合 Java 开发者使用的 Excel 操作库，特别是在需要处理大规模数据的情况下，它的性能优势尤为明显。如果你在项目中有 Excel 处理的需求，可以考虑使用 EasyExcel 来简化开发工作。</p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>导入导出</tag>
+      </tags>
+  </entry>
 </search>
