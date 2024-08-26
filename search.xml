@@ -1124,6 +1124,12 @@
 </ul>
 <p>两者可以结合使用：MyBatis Plus 用于简化业务逻辑开发，MyBatisX 用于提高开发效率。</p>
 ]]></content>
+      <categories>
+        <category>数据</category>
+      </categories>
+      <tags>
+        <tag>mybatisp</tag>
+      </tags>
   </entry>
   <entry>
     <title>excel导入导出工具</title>
