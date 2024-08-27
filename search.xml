@@ -1225,7 +1225,7 @@
   </entry>
   <entry>
     <title>Knife4j接口文档Dome</title>
-    <url>/2024/08/27/Knife4j%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3Dome/</url>
+    <url>/2024/08/27/Knife4jDome/</url>
     <content><![CDATA[<p>注意：学习本项目之前要会mybatis-plus和Knife4j的基本操作</p>
 <h2 id="数据库准备"><a href="#数据库准备" class="headerlink" title="数据库准备"></a>数据库准备</h2><p>首先在数据库中准备一张表，为后序的学习做准备。</p>
 <ol>
