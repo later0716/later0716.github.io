@@ -1250,7 +1250,7 @@
       </tags>
   </entry>
   <entry>
-    <title>“MicroservicesDay01”</title>
+    <title>微服务Day01</title>
     <url>/2024/08/30/%E2%80%9CMicroservicesDay01%E2%80%9D/</url>
     <content><![CDATA[<h2 id="传统单体架构"><a href="#传统单体架构" class="headerlink" title="传统单体架构"></a>传统单体架构</h2><ul>
 <li>将业务的所有功能集成到一个项目里面，打成一个包部署。</li>
