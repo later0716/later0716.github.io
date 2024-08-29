@@ -1249,4 +1249,52 @@
         <tag>Knife4j</tag>
       </tags>
   </entry>
+  <entry>
+    <title>“MicroservicesDay01”</title>
+    <url>/2024/08/30/%E2%80%9CMicroservicesDay01%E2%80%9D/</url>
+    <content><![CDATA[<h2 id="传统单体架构"><a href="#传统单体架构" class="headerlink" title="传统单体架构"></a>传统单体架构</h2><ul>
+<li>将业务的所有功能集成到一个项目里面，打成一个包部署。</li>
+</ul>
+<h2 id="分布式架构"><a href="#分布式架构" class="headerlink" title="分布式架构"></a>分布式架构</h2><ul>
+<li><p>根据业务功能对系统进行拆分，每个业务模块作为独立的项目开发，称为一个服务。</p>
+</li>
+<li><p>微服务是一种经过良好架构设计的分布式架构方案，微服务架构特征:</p>
+</li>
+<li><p>单一职责:微服务拆分粒度更小，每一个服务都对应唯一的业务能力，做到单一职责，避免重复业务开发</p>
+</li>
+<li><p>面向服务:微服务对外暴露业务接口</p>
+</li>
+<li><p>自治:团队独立、技术独立、数据独立、部署独立</p>
+</li>
+<li><p>以为我目前的理解就是，一个服务一个数据库，当一个服务需要另一个服务的数据的时候，是去请求另一个服务暴露的接口获取数据，而不是像以前的单体架构一样直接用。也许这就是服务者和消费者吧。</p>
+</li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240830003545210.png"
+                      alt="image-20240830003545210"
+                ></p>
+</li>
+<li><p>服务提供者：一次业务中，被其它微服务调用的服务。(提供接口给其它微服务）</p>
+</li>
+<li><p>服务消费者：一次业务中，调用其它微服务的服务。(调用其它微服务提供的接口)</p>
+</li>
+</ul>
+<h2 id="两个启动类，两个服务"><a href="#两个启动类，两个服务" class="headerlink" title="两个启动类，两个服务:"></a>两个启动类，两个服务:</h2><ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/417ea4812edca94c98a4238cb91bf2a.png"
+                     
+                ></li>
+</ul>
+<h2 id="服务A调用服务B，服务B调用服务C，那么服务B是什么角色"><a href="#服务A调用服务B，服务B调用服务C，那么服务B是什么角色" class="headerlink" title="服务A调用服务B，服务B调用服务C，那么服务B是什么角色?"></a>服务A调用服务B，服务B调用服务C，那么服务B是什么角色?</h2><p>一个服务既可以是消费者，可以是提供者，也可以是两者。</p>
+]]></content>
+      <categories>
+        <category>微服务</category>
+      </categories>
+      <tags>
+        <tag>微服务日记</tag>
+      </tags>
+  </entry>
 </search>
