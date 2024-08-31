@@ -1168,7 +1168,7 @@
         <category>数据</category>
       </categories>
       <tags>
-        <tag>mybatisp</tag>
+        <tag>mybatisplus</tag>
       </tags>
   </entry>
   <entry>
@@ -1251,7 +1251,7 @@
   </entry>
   <entry>
     <title>微服务Day01</title>
-    <url>/2024/08/30/%E2%80%9CMicroservicesDay01%E2%80%9D/</url>
+    <url>/2024/08/30/MicroservicesDay01/</url>
     <content><![CDATA[<h2 id="传统单体架构"><a href="#传统单体架构" class="headerlink" title="传统单体架构"></a>传统单体架构</h2><ul>
 <li>将业务的所有功能集成到一个项目里面，打成一个包部署。</li>
 </ul>
@@ -1295,6 +1295,43 @@
       </categories>
       <tags>
         <tag>微服务日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2023版IDEA复制配置修改端口增加一个当前运行服务的实操方法</title>
+    <url>/2024/08/31/Port-configuration-modification/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在进行微服务的学习当中，在enreka注册配置的时候，想要去模拟集群部署，就需要去复制配置，本文讲解一下如何复制，以及修改端口号。</p>
+<h2 id="流程截图"><a href="#流程截图" class="headerlink" title="流程截图"></a>流程截图</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240831103119037.png"
+                      alt="image-20240831103119037"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240831103206597.png"
+                      alt="image-20240831103206597"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240831103219191.png"
+                      alt="image-20240831103219191"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://laterblog-1306487993.cos.ap-guangzhou.myqcloud.com/img/image-20240831103255397.png"
+                      alt="image-20240831103255397"
+                ></p>
+]]></content>
+      <categories>
+        <category>idea</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+        <tag>端口修改</tag>
       </tags>
   </entry>
 </search>
